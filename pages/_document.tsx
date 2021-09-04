@@ -1,0 +1,150 @@
+import React from 'react';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
+
+class MyDocument extends Document {
+  static async getInitialProps(ctx: any) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return {...initialProps};
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link
+            rel="preload"
+            href="/fonts/SegmentThinItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentExtraBold/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentExtraLightItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentSemiBold/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentMediumItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentLightItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentMedium/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentExtraBoldItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentBlackItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentRegular/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentBlack/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentExtraLight/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentThin/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentSemiBoldItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentBoldItalic/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentBold/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/SegmentLight/font.woff"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument;

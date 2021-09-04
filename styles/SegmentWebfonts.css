@@ -1,0 +1,163 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4125958, 2021-07-15T11:46:33-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Segment-Thin by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/thin/
+ * 
+ * Webfont: Segment-ThinItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/thin-italic/
+ * 
+ * Webfont: Segment-ExtraLight by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/extra-light/
+ * 
+ * Webfont: Segment-ExtraLightItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/extra-light-italic/
+ * 
+ * Webfont: Segment-Light by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/light/
+ * 
+ * Webfont: Segment-LightItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/light-italic/
+ * 
+ * Webfont: Segment-Regular by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/regular/
+ * 
+ * Webfont: Segment-Italic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/italic/
+ * 
+ * Webfont: Segment-Medium by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/medium/
+ * 
+ * Webfont: Segment-MediumItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/medium-italic/
+ * 
+ * Webfont: Segment-SemiBold by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/semi-bold/
+ * 
+ * Webfont: Segment-SemiBoldItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/semi-bold-italic/
+ * 
+ * Webfont: Segment-Bold by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/bold/
+ * 
+ * Webfont: Segment-BoldItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/bold-italic/
+ * 
+ * Webfont: Segment-ExtraBold by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/extra-bold/
+ * 
+ * Webfont: Segment-ExtraBoldItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/extra-bold-italic/
+ * 
+ * Webfont: Segment-Black by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/black/
+ * 
+ * Webfont: Segment-BlackItalic by Typekiln
+ * URL: https://www.myfonts.com/fonts/typekiln/segment/black-italic/
+ * 
+ * 
+ * Webfonts copyright: ©2020 Typekiln.
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url('//hello.myfonts.net/count/3ef506');
+
+/* @font-face {
+  font-family: 'Segment-ThinItalic';
+  src: url('/fonts/SegmentThinItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentThinItalic/font.woff') format('woff');
+} */
+@font-face {
+  font-family: 'Segment-ExtraBold';
+  src: url('/fonts/SegmentExtraBold/font.woff2') format('woff2'),
+    url('/fonts/SegmentExtraBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-ExtraLightItalic';
+  src: url('/fonts/SegmentExtraLightItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentExtraLightItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-SemiBold';
+  src: url('/fonts/SegmentSemiBold/font.woff2') format('woff2'),
+    url('/fonts/SegmentSemiBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-MediumItalic';
+  src: url('/fonts/SegmentMediumItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentMediumItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-LightItalic';
+  src: url('/fonts/SegmentLightItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentLightItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Medium';
+  src: url('/fonts/SegmentMedium/font.woff2') format('woff2'),
+    url('/fonts/SegmentMedium/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-ExtraBoldItalic';
+  src: url('/fonts/SegmentExtraBoldItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentExtraBoldItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-BlackItalic';
+  src: url('/fonts/SegmentBlackItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentBlackItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Regular';
+  src: url('/fonts/SegmentRegular/font.woff2') format('woff2'),
+    url('/fonts/SegmentRegular/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Italic';
+  src: url('/fonts/SegmentItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Black';
+  src: url('/fonts/SegmentBlack/font.woff2') format('woff2'),
+    url('/fonts/SegmentBlack/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-ExtraLight';
+  src: url('/fonts/SegmentExtraLight/font.woff2') format('woff2'),
+    url('/fonts/SegmentExtraLight/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Thin';
+  src: url('/fonts/SegmentThin/font.woff2') format('woff2'),
+    url('/fonts/SegmentThin/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-SemiBoldItalic';
+  src: url('/fonts/SegmentSemiBoldItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentSemiBoldItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-BoldItalic';
+  src: url('/fonts/SegmentBoldItalic/font.woff2') format('woff2'),
+    url('/fonts/SegmentBoldItalic/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Bold';
+  src: url('/fonts/SegmentBold/font.woff2') format('woff2'),
+    url('/fonts/SegmentBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'Segment-Light';
+  src: url('/fonts/SegmentLight/font.woff2') format('woff2'),
+    url('/fonts/SegmentLight/font.woff') format('woff');
+}
