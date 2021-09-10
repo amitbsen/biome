@@ -46,4 +46,10 @@ const DOMAINS = [
   },
 ];
 
-export {DOMAINS};
+const DOMAINS_MAP = new Map();
+
+DOMAINS.forEach(domain => {
+  DOMAINS_MAP.set(domain.id, domain);
+});
+
+export {DOMAINS, DOMAINS_MAP};
