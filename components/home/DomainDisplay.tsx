@@ -5,7 +5,7 @@ import DomainCard from './DomainCard';
 
 const DomainDisplay = () => {
   return (
-    <section>
+    <section className="mb-8">
       <SectionHeader
         title="Museum explorer"
         subtitle="Where do you want to visit today?"

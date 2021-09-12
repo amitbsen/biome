@@ -1,6 +1,7 @@
 import {DeleteOutlined, InfoOutlined, PlusOutlined} from '@ant-design/icons';
 import {Card, Modal} from 'antd';
 import React, {useState} from 'react';
+import {addedLayerVar, removedLayerVar} from '../../data/cache';
 import {Dataset} from '../../types';
 import DatasetTextDescription from '../shared/DatasetTextDescription';
 
@@ -18,8 +19,16 @@ const LayerCard = (props: LayerCardComponentProps) => {
     <>
       <Card
         actions={[
-          <PlusOutlined />,
-          <DeleteOutlined />,
+          <PlusOutlined
+            onClick={() => {
+              addedLayerVar(dataset.service);
+            }}
+          />,
+          <DeleteOutlined
+            onClick={() => {
+              removedLayerVar(dataset.service);
+            }}
+          />,
           <InfoOutlined
             onClick={() => {
               setModalVisible(true);

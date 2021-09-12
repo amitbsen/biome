@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Banner = () => {
   return (
     <Link href="explore">
-      <div className="bg-blue-500 rounded grid grid-cols-3 cursor-pointer">
+      <div className="mb-8 bg-blue-500 rounded grid grid-cols-3 cursor-pointer">
         <div></div>
         <div className="py-6 col-span-2">
           <h1 className="text-xl text-white mb-1">Follow us on instagram</h1>

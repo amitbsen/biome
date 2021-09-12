@@ -8,7 +8,7 @@ const TOOLS = [
     description: '',
   },
   {
-    title: 'Impact Assessor',
+    title: 'Community Checkup',
     description: 'Understand the impact of ',
   },
 ];

@@ -1,11 +1,10 @@
 import React, {useEffect, useRef} from 'react';
 import ArcGISMap from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
-import MapHandler from './MapHandler';
 import Legend from '@arcgis/core/widgets/Legend';
-import {exploreMapVar} from '../../data/cache';
+import {communityCheckupMapVar} from '../../data/cache';
 
-const ExploreMap = () => {
+const CommunityCheckupMap = () => {
   const mapDiv = useRef(null);
 
   useEffect(() => {
@@ -32,21 +31,15 @@ const ExploreMap = () => {
         console.log(view.extent);
       });
 
-      const legend = new Legend({
-        view,
-      });
-
-      view.ui.add(legend);
-
-      exploreMapVar(map);
+      communityCheckupMapVar(map);
     }
   });
 
   return (
-    <div className="explorerMap h-full" ref={mapDiv}>
-      <MapHandler />
+    <div className="communityCheckupMap h-full" ref={mapDiv}>
+      {/* <MapHandler /> */}
     </div>
   );
 };
 
-export default ExploreMap;
+export default CommunityCheckupMap;

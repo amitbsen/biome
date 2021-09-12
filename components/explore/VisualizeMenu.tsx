@@ -2,25 +2,15 @@ import {Tabs} from 'antd';
 import React from 'react';
 import {DATASETS, DOMAINS} from '../../constants/datasets';
 import SectionHeader from '../shared/SectionHeader';
-import BackButton from './BackButton';
 import LayerCard from './LayerCard';
-
-interface VisualizeMenuComponentProps {
-  goBack: () => void;
-}
 
 const {TabPane} = Tabs;
 
-const VisualizeMenu = (props: VisualizeMenuComponentProps) => {
-  const {goBack} = props;
-
+const VisualizeMenu = () => {
   return (
-    <div className="pt-5 flex flex-col">
-      <div className="mb-4">
-        <BackButton goBack={goBack} />
-      </div>
+    <div className="pt-8 flex flex-col">
       <SectionHeader
-        title="Visualize"
+        title="Explore"
         subtitle="Visualize different combinations of datasets together in the same map."
       />
 

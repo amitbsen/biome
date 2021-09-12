@@ -5,7 +5,7 @@ import ToolCard from './ToolCard';
 
 const ToolsSection = () => {
   return (
-    <section>
+    <section className="mb-8">
       <SectionHeader
         title="Hidden Insights"
         subtitle="See the datasets in use from biomass planning to decision-making"
