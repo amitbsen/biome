@@ -18,7 +18,7 @@ const DatasetDescription = (props: DatasetDescriptionComponentProps) => {
     <>
       <DatasetTextDescription dataset={dataset} />
       <div className="h-screen">
-        <EsriMapWithNoSSR layerUrl="" />
+        <EsriMapWithNoSSR />
       </div>
     </>
   );

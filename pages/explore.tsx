@@ -14,7 +14,7 @@ const {Sider, Content} = Layout;
 
 const Explore = () => {
   return (
-    <Layout style={{height: `calc(100vh - 80px)`}}>
+    <Layout style={{height: 'calc(100vh - 80px)'}}>
       <Sider width={400}>
         <ExploreMenuContainer />
       </Sider>
