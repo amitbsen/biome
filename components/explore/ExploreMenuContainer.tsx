@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import AnalyzeMenu from './AnalyzeMenu';
 import MainMenu from './MainMenu';
 import SectionButton from './SectionButton';
 
@@ -14,6 +15,7 @@ const ExploreMenuContainer = () => {
       {currMenu === 'main' ? (
         <MainMenu goToAnalyze={goToAnalyze} goToVisualize={goToVisualize} />
       ) : null}
+      {currMenu === 'analyze' ? <AnalyzeMenu goBack={goToMain} /> : null}
     </div>
   );
 };

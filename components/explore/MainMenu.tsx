@@ -1,5 +1,5 @@
 import React from 'react';
-import ExploreHeader from './ExploreHeader';
+import SectionHeader from '../shared/SectionHeader';
 import SectionButton from './SectionButton';
 
 interface MainMenuComponentProps {
@@ -12,7 +12,10 @@ const MainMenu = (props: MainMenuComponentProps) => {
 
   return (
     <>
-      <ExploreHeader />
+      <SectionHeader
+        title="Explore the Data"
+        subtitle="Visualize different layers on the map or dive deeper into specific localities."
+      />
       <SectionButton
         color="blue"
         title="Analyze"
