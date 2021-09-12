@@ -10,7 +10,11 @@ module.exports = {
         xl: '1200px',
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'cameroon-banner': "url('../public/images/cameroon-banner.jpeg')",
+      },
+    },
   },
   variants: {
     extend: {},

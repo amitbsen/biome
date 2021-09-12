@@ -15,6 +15,7 @@
     "posttest": "yarn run lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.6.4",
     "@arcgis/core": "^4.20.2",
     "@types/arcgis-js-api": "^4.20.1",
     "antd": "^4.16.7",

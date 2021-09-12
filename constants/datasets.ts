@@ -8,6 +8,7 @@ const DATASETS = [
     dataProvider: ['Global Forest Watch'],
     sourceLink:
       'https://data.globalforestwatch.org/datasets/gfw::cameroon-agro-industrial-zones/about',
+    imgUrl: '/images/agro-industrial-zones.jpeg',
     title: 'Agro-Industrial Zones',
   },
   {
@@ -17,6 +18,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/agriculture/',
+    imgUrl: '',
     title: 'Maize Production',
   },
   {
@@ -26,6 +28,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/agriculture/',
+    imgUrl: '',
     title: 'Rice Production',
   },
   {
@@ -35,6 +38,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/agriculture/',
+    imgUrl: '',
     title: 'Sorghum Production',
   },
   {
@@ -46,6 +50,7 @@ const DATASETS = [
     dataProvider: ['Global Forest Watch'],
     sourceLink:
       'https://data.globalforestwatch.org/datasets/gfw::cameroon-community-forests/about',
+    imgUrl: '',
     title: 'Community Forests',
   },
   {
@@ -57,6 +62,7 @@ const DATASETS = [
     dataProvider: ['Global Forest Watch'],
     sourceLink:
       'https://data.globalforestwatch.org/datasets/gfw::cameroon-forest-management-units/about',
+    imgUrl: '',
     title: 'Forest Management Units',
   },
   {
@@ -68,6 +74,7 @@ const DATASETS = [
     dataProvider: ['Global Forest Watch'],
     sourceLink:
       'https://data.globalforestwatch.org/datasets/gfw::managed-forest-concessions/about',
+    imgUrl: '',
     title: 'Managed Forest Concessions',
   },
   {
@@ -78,6 +85,7 @@ const DATASETS = [
     dataProvider: ['Open Street Map', 'Esri'],
     sourceLink:
       'https://amitbsen.maps.arcgis.com/home/item.html?id=bb86721588ea49b6b44b10b7d5d2b0b1',
+    imgUrl: '',
     title: 'Buildings',
   },
   {
@@ -87,6 +95,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/infrastructure/electrification/',
+    imgUrl: '',
     title: 'Electrification',
   },
   {
@@ -97,6 +106,7 @@ const DATASETS = [
     dataProvider: ['Open Street Map', 'Esri'],
     sourceLink:
       'https://amitbsen.maps.arcgis.com/home/item.html?id=1825495e3c1a4238a2b234d4fdc1861d',
+    imgUrl: '',
     title: 'Landuse Areas',
   },
   {
@@ -107,6 +117,7 @@ const DATASETS = [
     dataProvider: ['Global Forest Watch'],
     sourceLink:
       'https://data.globalforestwatch.org/datasets/minfof::road-network/about',
+    imgUrl: '',
     title: 'Road Networks',
   },
   {
@@ -117,6 +128,7 @@ const DATASETS = [
     dataProvider: ['Open Street Map', 'Esri'],
     sourceLink:
       'https://amitbsen.maps.arcgis.com/home/item.html?id=82232d0415c04e7086414dff7eb1310f',
+    imgUrl: '',
     title: 'Waterways',
   },
   {
@@ -126,6 +138,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/population/',
+    imgUrl: '',
     title: 'Population',
   },
   {
@@ -135,6 +148,7 @@ const DATASETS = [
     ],
     dataProvider: ['Atlas AI'],
     sourceLink: 'https://docs.atlasai.co/population/',
+    imgUrl: '',
     title: 'Population Density',
   },
   {
@@ -144,6 +158,7 @@ const DATASETS = [
       'Accurate and comprehensive measurements of economic well-being are fundamental inputs into commerce, research, and policy but such measures are unavailable at a local level in many parts of the world. Our Asset Wealth layer is produced from a deep learning model that predicts survey-based estimates from satellite imagery. To facilitate comparison within and across countries, we transformed Asset Wealth into a normalized index. The index is then also divided into nine quantiles (i.e. bins) for easily comparing the Asset Wealth estimate at a particular location to estimates for other locations.',
     ],
     dataProvider: ['Atlas AI'],
+    imgUrl: '',
     title: 'Asset Wealth',
     sourceLink: 'https://docs.atlasai.co/economic%20well-being/asset_wealth/',
   },
@@ -154,6 +169,7 @@ const DATASETS = [
       'The Spending concept is one good way to measure economic well-being. It reflects what people need to spend money on for basic needs and services, as well as what they choose to spend money on for discretionary activities and goods. To make comparisons and calculations easier, we normalize this as household spending per person, per day.',
     ],
     dataProvider: ['Atlas AI'],
+    imgUrl: '',
     title: 'Economic Spending',
     sourceLink: 'https://docs.atlasai.co/economic%20well-being/spending/',
   },
@@ -163,6 +179,7 @@ const DATASETS = [
       'This feature layer provides access to OpenStreetMap (OSM) highways data for Africa, which is updated every 5 minutes with the latest edits. This hosted feature layer view is referencing a hosted feature layer of OSM line (way) data in ArcGIS Online that is updated with minutely diffs from the OSM planet file.  This feature layer view includes highway features defined as a query against the hosted feature layer (i.e. highway is not blank).',
     ],
     dataProvider: ['Open Street Map', 'Esri'],
+    imgUrl: '',
     title: 'Highways',
     sourceLink:
       'https://amitbsen.maps.arcgis.com/home/item.html?id=6d78851a40f54041a775d7c6f4b2633e',

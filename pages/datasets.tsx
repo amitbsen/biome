@@ -1,5 +1,6 @@
 import {Layout} from 'antd';
 import React from 'react';
+import Catalog from '../components/datasets/Catalog';
 import DatasetsHeader from '../components/datasets/DatasetsHeader';
 
 const Datasets = () => {
@@ -9,6 +10,8 @@ const Datasets = () => {
       style={{background: '#fff'}}
     >
       <DatasetsHeader />
+
+      <Catalog />
     </Layout>
   );
 };

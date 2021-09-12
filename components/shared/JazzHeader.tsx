@@ -14,7 +14,7 @@ const JazzHeader = () => {
   };
 
   return (
-    <Header className="flex justify-between">
+    <Header className="flex justify-between border border-t-0 border-l-0 border-r-0">
       <Menu
         onSelect={handleSelect}
         mode="horizontal"

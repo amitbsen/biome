@@ -1,28 +1,22 @@
 import {Collapse} from 'antd';
 import React from 'react';
-import dynamic from 'next/dynamic';
-
-const EsriMapWithNoSSR = dynamic(() => import('./DatasetMap'), {
-  ssr: false,
-});
+import {Dataset} from '../../types';
+import DatasetDescription from '../shared/DatasetDescription';
 
 const {Panel} = Collapse;
 
 interface DatasetPanelComponentProps {
-  header: React.ReactNode;
+  dataset: Dataset;
 }
 
 const DatasetPanel = (props: DatasetPanelComponentProps) => {
-  const {header} = props;
+  const {dataset} = props;
 
   return (
     <div className="mb-2">
       <Collapse>
-        <Panel header={header} key={`${Math.random()}`}>
-          <p>Test</p>
-          <div className="h-screen">
-            <EsriMapWithNoSSR layerUrl="" />
-          </div>
+        <Panel header={dataset.title} key={`${Math.random()}`}>
+          <DatasetDescription dataset={dataset} />
         </Panel>
       </Collapse>
     </div>

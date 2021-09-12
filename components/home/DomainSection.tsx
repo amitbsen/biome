@@ -1,11 +1,7 @@
 import React from 'react';
 import SectionHeader from '../shared/SectionHeader';
 import DatasetPanel from './DatasetCollapse';
-
-interface Dataset {
-  title: string;
-  domain: string;
-}
+import {Dataset} from '../../types';
 
 interface DomainSectionComponentProps {
   title: string;
@@ -20,8 +16,8 @@ const DomainSection = (props: DomainSectionComponentProps) => {
     <section className="py-8">
       <SectionHeader title={title} subtitle={subtitle} />
 
-      {datasets.map(({title}) => (
-        <DatasetPanel header={title} key={title} />
+      {datasets.map(dataset => (
+        <DatasetPanel dataset={dataset} />
       ))}
     </section>
   );
