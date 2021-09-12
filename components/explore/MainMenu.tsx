@@ -11,7 +11,7 @@ const MainMenu = (props: MainMenuComponentProps) => {
   const {goToAnalyze, goToVisualize} = props;
 
   return (
-    <>
+    <div className="pt-12">
       <SectionHeader
         title="Explore the Data"
         subtitle="Visualize different layers on the map or dive deeper into specific localities."
@@ -28,7 +28,7 @@ const MainMenu = (props: MainMenuComponentProps) => {
         subtitle="Visualize different combinations of datasets together in the same map."
         handleClick={goToVisualize}
       />
-    </>
+    </div>
   );
 };
 

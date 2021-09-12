@@ -1,6 +1,7 @@
 import React from 'react';
 import {Dataset} from '../../types';
 import dynamic from 'next/dynamic';
+import DatasetTextDescription from './DatasetTextDescription';
 
 const EsriMapWithNoSSR = dynamic(() => import('./DatasetMap'), {
   ssr: false,
@@ -11,15 +12,11 @@ interface DatasetDescriptionComponentProps {
 }
 
 const DatasetDescription = (props: DatasetDescriptionComponentProps) => {
-  const {
-    dataset: {summary},
-  } = props;
+  const {dataset} = props;
 
   return (
     <>
-      {summary.map((str, idx) => (
-        <p key={idx}>{str}</p>
-      ))}
+      <DatasetTextDescription dataset={dataset} />
       <div className="h-screen">
         <EsriMapWithNoSSR layerUrl="" />
       </div>

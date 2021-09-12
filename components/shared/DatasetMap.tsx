@@ -1,14 +1,9 @@
 import React, {useRef, useEffect} from 'react';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
 import ArcGISMap from '@arcgis/core/Map';
-import DictionaryRenderer from '@arcgis/core/renderers/DictionaryRenderer';
 import MapView from '@arcgis/core/views/MapView';
 
-interface JazzMapComponentProps {
-  layerUrl: string;
-}
-
-const JazzMap = (props: JazzMapComponentProps) => {
+const JazzMap = () => {
   // const {
   //   layerUrl = 'https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Alternative_Fuel_Station_March2018/FeatureServer',
   // } = props;
@@ -23,7 +18,7 @@ const JazzMap = (props: JazzMapComponentProps) => {
         basemap: 'gray-vector',
       });
 
-      const view = new MapView({
+      new MapView({
         map,
         container: mapDiv.current,
         extent: {
@@ -68,7 +63,6 @@ const JazzMap = (props: JazzMapComponentProps) => {
       //   ],
       // };
 
-      const scale = 36112;
       // const layer1 = new FeatureLayer({
       //   url: layerUrl,
       //   outFields: ['*'],

@@ -1,10 +1,9 @@
-import {Card, Tabs} from 'antd';
+import {Tabs} from 'antd';
 import React from 'react';
 import {DATASETS, DOMAINS} from '../../constants/datasets';
 import CatalogTile from './CatalogTile';
 
 const {TabPane} = Tabs;
-const {Meta} = Card;
 
 const Catalog = () => {
   return (

@@ -11,14 +11,14 @@ const ExploreMap = () => {
         basemap: 'gray-vector',
       });
 
-      const view = new MapView({
+      new MapView({
         map,
         container: mapDiv.current,
       });
     }
   });
 
-  return <div className="explorerMap h-screen" ref={mapDiv} />;
+  return <div className="explorerMap h-full" ref={mapDiv} />;
 };
 
 export default ExploreMap;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Separator from '../shared/Separator';
 import {RightOutlined} from '@ant-design/icons';
 
 interface SectionButtonComponentProps {
@@ -22,7 +21,7 @@ const SectionButton = (props: SectionButtonComponentProps) => {
     >
       <div>
         <h2 className="text-2xl text-white font-semibold mb-1">{title}</h2>
-        <p className={`text-base font-light text-white mb-6`}>{subtitle}</p>
+        <p className={'text-base font-light text-white mb-6'}>{subtitle}</p>
       </div>
 
       <span
