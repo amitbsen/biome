@@ -8,8 +8,11 @@ import {API_KEY} from '../../constants/esriConfig';
 import {
   candidateLocationsVar,
   deliveryLocationsVar,
+  nearestFacilitiesVar,
   selectedBiomassVar,
 } from '../../data/cache';
+import FinalMap from './FinalMap';
+import {Descriptions} from 'antd';
 
 const corsAnywhere = 'https://cors-anywhere.herokuapp.com/';
 const findNearestUrl =
@@ -96,6 +99,9 @@ const ResultsContainer = () => {
     );
 
     setNearestFacilities(response.data.routes);
+    // eslint-disable-next-line no-debugger
+    debugger;
+    nearestFacilitiesVar(response.data.routes);
   };
 
   const getYields = async (candidateStr: string, crop: string) => {
@@ -152,7 +158,7 @@ const ResultsContainer = () => {
   }, [candidateLocations, deliveryLocations, selectedBiomass]);
 
   return (
-    <section className="mt-16 grid grid-cols-3" style={{maxHeight: 400}}>
+    <section className="mt-16 grid grid-cols-3">
       <div className="overflow-auto " style={{maxHeight: 400}}>
         {yields
           ? yields.map(({id, val}) => {
@@ -165,6 +171,29 @@ const ResultsContainer = () => {
                     The average annual yield is: {val.toFixed(3)} hectares per
                     cell.
                   </p>
+                </div>
+              );
+            })
+          : null}
+      </div>
+
+      <div className="col-span-2">
+        {nearestFacilities && yields ? <FinalMap /> : null}
+      </div>
+      <div className="col-span-3">
+        <h1>Routes</h1>
+        {nearestFacilities
+          ? nearestFacilities.features.map(({attributes}, idx) => {
+              return (
+                <div className="rounded border" key={idx}>
+                  <Descriptions title={`Route: ${attributes.Name}`}>
+                    <Descriptions.Item label="Total Mileage">
+                      {attributes.Total_Miles.toFixed(2)}
+                    </Descriptions.Item>
+                    <Descriptions.Item label="Total Travel Time">
+                      {attributes.Total_TravelTime.toFixed(2)}
+                    </Descriptions.Item>
+                  </Descriptions>
                 </div>
               );
             })

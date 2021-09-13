@@ -14,7 +14,7 @@ const deliveryLocationsVar = makeVar<null | any>(null);
 const deliveryViewVar = makeVar<null | any>(null);
 const deliveryMapVar = makeVar<null | any>(null);
 const selectedBiomassVar = makeVar<string>('maize');
-const nearestFacilities = makeVar<null | any>(null);
+const nearestFacilitiesVar = makeVar<null | any>(null);
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -85,6 +85,11 @@ const cache = new InMemoryCache({
             return removedLayerVar();
           },
         },
+        nearestFacilities: {
+          read() {
+            return nearestFacilitiesVar();
+          },
+        },
       },
     },
   },
@@ -105,4 +110,5 @@ export {
   deliveryLocationsVar,
   deliveryViewVar,
   selectedBiomassVar,
+  nearestFacilitiesVar,
 };
