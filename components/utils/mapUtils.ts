@@ -1,11 +1,42 @@
 import ArcGISMap from '@arcgis/core/Map';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
+import ImageryLayer from '@arcgis/core/layers/ImageryLayer';
 import {Service} from '../../types';
 
 const addServiceToMap = (map: ArcGISMap, service: Service) => {
   if (service.type === 'feature') {
     addFeatureServiceToMap(map, service);
   }
+  if (service.type === 'image') {
+    addImageServiceToMap(map, service);
+  }
+};
+const addImageServiceToMap = (map: ArcGISMap, service: Service) => {
+  const {id, link, fields} = service;
+
+  const featureLayer = new ImageryLayer({
+    url: link,
+    id,
+    popupEnabled: true,
+  });
+
+  const fieldInfos = fields
+    ? fields.map(field => ({
+        fieldName: field.name,
+      }))
+    : [];
+
+  const popupTemplate = {
+    content: [
+      {
+        type: 'fields',
+        fieldInfos: fieldInfos,
+      },
+    ],
+  };
+  featureLayer.set('popupTemplate', popupTemplate);
+
+  map.add(featureLayer);
 };
 
 const addFeatureServiceToMap = (map: ArcGISMap, service: Service) => {
@@ -16,9 +47,6 @@ const addFeatureServiceToMap = (map: ArcGISMap, service: Service) => {
     id,
     popupEnabled: true,
   });
-
-  // eslint-disable-next-line no-debugger
-  debugger;
 
   const fieldInfos = fields
     ? fields.map(field => ({

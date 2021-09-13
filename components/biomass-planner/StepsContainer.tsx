@@ -1,19 +1,25 @@
 import {Button, Steps} from 'antd';
+import dynamic from 'next/dynamic';
 import React, {useState} from 'react';
 import BiomassSelector from './BiomassSelector';
 import CandidateSelection from './CandidateSelection';
 import DeliverySelection from './DeliverySelection';
+import ResultsContainer from './ResultsContainer';
 
 const {Step} = Steps;
 const steps = [
-  {title: 'Biomass Selection', description: 'Choose the biomass that'},
+  {title: 'Crop Selection', description: ''},
   {
-    title: 'Candidate Locations',
-    description: 'Select the candidate locations ',
+    title: 'Candidate Harvest Areas',
+    description: '',
   },
-  {title: 'Distance to Export', description: ''},
+  {title: 'Biomass Processing Facilities', description: ''},
   {title: 'Results', description: ''},
 ];
+
+const ResultsContainerWithNoSSR = dynamic(() => import('./ResultsContainer'), {
+  ssr: false,
+});
 
 const StepsContainer = () => {
   const [currStep, setCurrStep] = useState(0);
@@ -36,7 +42,7 @@ const StepsContainer = () => {
       {currStep === 0 ? <BiomassSelector /> : null}
       {currStep === 1 ? <CandidateSelection /> : null}
       {currStep === 2 ? <DeliverySelection /> : null}
-      {}
+      {currStep === 3 ? <ResultsContainerWithNoSSR /> : null}
       <div className="flex justify-between mt-8">
         <div>
           {currStep !== 0 ? (

@@ -4,12 +4,15 @@ import MapView from '@arcgis/core/views/MapView';
 import MapHandler from './MapHandler';
 import Legend from '@arcgis/core/widgets/Legend';
 import {exploreMapVar} from '../../data/cache';
+import esriConfig from '@arcgis/core/config';
+import {API_KEY} from '../../constants/esriConfig';
 
 const ExploreMap = () => {
   const mapDiv = useRef(null);
 
   useEffect(() => {
     if (mapDiv.current) {
+      esriConfig.apiKey = API_KEY;
       const map = new ArcGISMap({
         basemap: 'osm',
       });
@@ -36,7 +39,7 @@ const ExploreMap = () => {
         view,
       });
 
-      view.ui.add(legend);
+      view.ui.add(legend, 'bottom-right');
 
       exploreMapVar(map);
     }

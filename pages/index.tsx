@@ -12,11 +12,11 @@ const Home = () => {
       className="min-h-screen container mx-auto"
       style={{background: '#fff'}}
     >
+      <span className="bg-agriculture bg-forestry bg-zoning bg-infrastructure" />
       <Jumbotron />
-      <DomainDisplay />
       <Banner />
       <ToolsSection />
-      <DataProvidersSection />
+      <DomainDisplay />
     </Layout>
   );
 };

@@ -16,10 +16,10 @@ const DatasetDescription = (props: DatasetDescriptionComponentProps) => {
 
   return (
     <>
-      <DatasetTextDescription dataset={dataset} />
-      <div className="h-screen">
-        <EsriMapWithNoSSR />
+      <div style={{height: 400}} className="mb-5">
+        <EsriMapWithNoSSR dataset={dataset} />
       </div>
+      <DatasetTextDescription dataset={dataset} />
     </>
   );
 };

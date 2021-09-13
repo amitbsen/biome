@@ -7,14 +7,15 @@ interface DomainCardComponentProps {
   name: string;
   description: string;
   link: string;
+  bgImg: string;
 }
 
 const DomainCard = (props: DomainCardComponentProps) => {
-  const {name, description, link} = props;
+  const {name, description, link, bgImg} = props;
   return (
     <Link href="/datasets">
       <div
-        className="bg-gray-400 text-white text-center rounded grid grid-rows pt-12 pb-24 justify-items-center cursor-pointer"
+        className={`${bgImg} bg-cover bg-center text-white text-center rounded grid grid-rows pt-12 pb-24 justify-items-center cursor-pointer`}
         style={{height: 488}}
       >
         <Separator color="white" width={30} />
@@ -23,7 +24,9 @@ const DomainCard = (props: DomainCardComponentProps) => {
           <p>{description}</p>
         </div>
         <div>
-          <p className="mb-0 py-1 px-4 border-2 text-sm">Explore</p>
+          <p className="hover:bg-white hover:text-black transition-all duration-200 mb-0 py-1 px-4 border-2 text-sm border-white">
+            Explore
+          </p>
         </div>
       </div>
     </Link>
