@@ -1,19 +1,24 @@
+import {Layout} from 'antd';
 import React from 'react';
-import {Button, Layout} from 'antd';
+import Banner from '../components/home/Banner';
+import DataProvidersSection from '../components/home/DataProvidersSection';
+import DomainDisplay from '../components/home/DomainDisplay';
+import Jumbotron from '../components/home/Jumbotron';
+import ToolsSection from '../components/home/ToolsSection';
 
-const {Header, Content} = Layout;
-
-const Home = () => (
-  <Layout>
-    <Header>
-      <div className="mx-auto container flex items-center h-full">
-        <h1 className="font-semibold text-xl mb-0 leadi">pitbull</h1>
-      </div>
-    </Header>
-    <Content style={{padding: '0 50px'}}>
-      <Button type="primary">Test</Button>
-    </Content>
-  </Layout>
-);
+const Home = () => {
+  return (
+    <Layout
+      className="min-h-screen container mx-auto"
+      style={{background: '#fff'}}
+    >
+      <Jumbotron />
+      <DomainDisplay />
+      <Banner />
+      <ToolsSection />
+      <DataProvidersSection />
+    </Layout>
+  );
+};
 
 export default Home;
