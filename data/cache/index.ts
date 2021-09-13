@@ -8,6 +8,8 @@ const communityCheckupMapVar = makeVar<null | any>(null);
 const removedLayerVar = makeVar<null | Service>(null);
 const selectedCommunityVar = makeVar<null | any>(null);
 const useGeoenrichmentVar = makeVar(false);
+const candidateLocationsVar = makeVar<null | any>(null);
+const candidateViewVar = makeVar<null | any>(null);
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -43,6 +45,16 @@ const cache = new InMemoryCache({
             return addedLayerVar();
           },
         },
+        candidateLocations: {
+          read() {
+            return candidateLocationsVar();
+          },
+        },
+        candidateView: {
+          read() {
+            return candidateViewVar();
+          },
+        },
         removedLayer: {
           read() {
             return removedLayerVar();
@@ -62,4 +74,6 @@ export {
   selectedCommunityVar,
   useGeoenrichmentVar,
   candidateMapVar,
+  candidateLocationsVar,
+  candidateViewVar,
 };

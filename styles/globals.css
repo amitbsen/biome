@@ -1,9 +1,5 @@
-@import 'https://js.arcgis.com/4.20/@arcgis/core/assets/esri/themes/light/main.css';
+@import 'tailwindcss/tailwind.css';
 @import './SegmentWebfonts.css';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 html,
 body {

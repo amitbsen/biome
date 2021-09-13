@@ -3,7 +3,7 @@ import ArcGISMap from '@arcgis/core/Map';
 import MapView from '@arcgis/core/views/MapView';
 import MapHandler from './CandidateMapHandler';
 import Legend from '@arcgis/core/widgets/Legend';
-import {candidateMapVar} from '../../data/cache';
+import {candidateMapVar, candidateViewVar} from '../../data/cache';
 
 const CandidateMap = () => {
   const mapDiv = useRef(null);
@@ -29,6 +29,7 @@ const CandidateMap = () => {
       });
 
       candidateMapVar(map);
+      candidateViewVar(view);
     }
   });
 
