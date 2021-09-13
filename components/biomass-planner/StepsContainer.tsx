@@ -2,6 +2,7 @@ import {Button, Steps} from 'antd';
 import React, {useState} from 'react';
 import BiomassSelector from './BiomassSelector';
 import CandidateSelection from './CandidateSelection';
+import DeliverySelection from './DeliverySelection';
 
 const {Step} = Steps;
 const steps = [
@@ -34,6 +35,8 @@ const StepsContainer = () => {
       </Steps>
       {currStep === 0 ? <BiomassSelector /> : null}
       {currStep === 1 ? <CandidateSelection /> : null}
+      {currStep === 2 ? <DeliverySelection /> : null}
+      {}
       <div className="flex justify-between mt-8">
         <div>
           {currStep !== 0 ? (

@@ -3,13 +3,16 @@ import {Service} from '../../types';
 
 const addedLayerVar = makeVar<null | Service>(null);
 const exploreMapVar = makeVar<null | any>(null);
-const candidateMapVar = makeVar<null | any>(null);
 const communityCheckupMapVar = makeVar<null | any>(null);
 const removedLayerVar = makeVar<null | Service>(null);
 const selectedCommunityVar = makeVar<null | any>(null);
 const useGeoenrichmentVar = makeVar(false);
 const candidateLocationsVar = makeVar<null | any>(null);
 const candidateViewVar = makeVar<null | any>(null);
+const candidateMapVar = makeVar<null | any>(null);
+const deliveryLocationsVar = makeVar<null | any>(null);
+const deliveryViewVar = makeVar<null | any>(null);
+const deliveryMapVar = makeVar<null | any>(null);
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -30,11 +33,6 @@ const cache = new InMemoryCache({
             return exploreMapVar();
           },
         },
-        candidateMap: {
-          read() {
-            return candidateMapVar();
-          },
-        },
         communityCheckupMap: {
           read() {
             return communityCheckupMapVar();
@@ -45,6 +43,11 @@ const cache = new InMemoryCache({
             return addedLayerVar();
           },
         },
+        candidateMap: {
+          read() {
+            return candidateMapVar();
+          },
+        },
         candidateLocations: {
           read() {
             return candidateLocationsVar();
@@ -53,6 +56,21 @@ const cache = new InMemoryCache({
         candidateView: {
           read() {
             return candidateViewVar();
+          },
+        },
+        deliveryMap: {
+          read() {
+            return deliveryMapVar();
+          },
+        },
+        deliveryLocations: {
+          read() {
+            return deliveryLocationsVar();
+          },
+        },
+        deliveryView: {
+          read() {
+            return deliveryViewVar();
           },
         },
         removedLayer: {
@@ -76,4 +94,7 @@ export {
   candidateMapVar,
   candidateLocationsVar,
   candidateViewVar,
+  deliveryMapVar,
+  deliveryLocationsVar,
+  deliveryViewVar,
 };

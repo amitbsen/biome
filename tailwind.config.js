@@ -12,7 +12,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'cameroon-banner': "url('/public/images/cameroon-banner.jpeg')",
+        'cameroon-banner': "url('/images/cameroon-banner.jpeg')",
       },
     },
   },
