@@ -102,6 +102,7 @@ const ResultsContainer = () => {
     const blob = new Blob([candidateStr], {
       type: 'application/json',
     });
+    // eslint-disable-next-line node/no-unsupported-features/node-builtins
     const url = URL.createObjectURL(blob);
     const layer = new GeoJSONLayer({
       id: 'candidates',
