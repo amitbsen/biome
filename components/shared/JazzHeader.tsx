@@ -21,7 +21,7 @@ const JazzHeader = () => {
     >
       <div className="flex content-center">
         <CgTrees className="relative mt-4 text-green-400 text-3xl" />
-        <h1 className="text-xl mt-4 ml-1 text-black font-bold">Ruto</h1>
+        <h1 className="text-xl mt-4 ml-1 text-black font-bold">Biome</h1>
       </div>
       <div className="flex justify-between flex-grow">
         <Menu

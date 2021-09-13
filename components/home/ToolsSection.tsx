@@ -7,13 +7,19 @@ const ToolsSection = () => {
   return (
     <section className="mb-8">
       <SectionHeader
-        title="Hidden Insights"
-        subtitle="See the datasets in use from biomass planning to decision-making"
+        title="Actionable Insights"
+        subtitle="Use Biome's tools to get empowered to make the decisions that matter the most."
       />
 
       <div className="grid grid-cols-3 gap-6">
-        {TOOLS.map(({title, description}, idx) => (
-          <ToolCard title={title} description={description} key={idx} />
+        {TOOLS.map(({title, description, image, link}, idx) => (
+          <ToolCard
+            title={title}
+            description={description}
+            key={idx}
+            image={image}
+            link={link}
+          />
         ))}
       </div>
     </section>

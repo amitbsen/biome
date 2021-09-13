@@ -1,6 +1,6 @@
 const DATASETS = [
   {
-    domain: 'agriculture',
+    domain: 'zoning',
     summary: [
       'This data layer shows the boundaries of agro-industrial zones, where oil palm and rubber tree plantations, as well as other crops, may be established.',
       'This data layer shows the boundaries of agro-industrial zones, where oil palm and rubber tree plantations, as well as other crops, may be established. In Cameroon, industrial agriculture falls outside of the National Forest Estate. Agricultural plantations are allocated by the Ministry of Economy and Planning to private entities under long-term, renewable contracts, which are then monitored by the Ministry of Agriculture. The agro-industrial data set was mapped using satellite imagery, with ground-truthing to determine the crop type and operating company.',
@@ -91,45 +91,48 @@ const DATASETS = [
   {
     domain: 'agriculture',
     summary: [
-      'This data layer shows the total crop production (metric tonnes) as a measure of output from the cultivated area. The layer currently includes the crops maize.',
+      'Maize (Zea mays), also known as corn, is a crop of world wide importance. Originally domesticated in what is now Mexico, its tolerance of diverse climates has lead to its widespread cultivation. Globally, it is tied with rice as the second most widely grown crop. Only wheat is more widely grown. In Africa it is grown throughout the agricultural regions of the continent from the Nile Delta in the north to the country of South Africa in the south. In sub-Saharan Africa it is relied on as a staple crop for 50% of the population.',
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'maize',
+      type: 'image',
+      link: 'https://landscape5.arcgis.com/arcgis/rest/services/Africa_Crop_Maize/ImageServer/',
     },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/agriculture/',
+    dataProvider: ['Esri'],
+    sourceLink:
+      'https://amitbsen.maps.arcgis.com/home/item.html?id=6fab7020446c43b0b44727d6cb134ae8',
     imgUrl: '',
     title: 'Maize Production',
   },
   {
     domain: 'agriculture',
     summary: [
-      'This data layer shows the total crop production (metric tonnes) as a measure of output from the cultivated area. The layer currently includes the rice.',
+      "Rice (Oryza sativa and O. glaberrima) is one of the world's most important staple food crops. Over half of the world's population relies on rice. The people in some parts of Africa have been cultivating rice for over 3,500 years.",
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'rice',
+      type: 'image',
+      link: 'https://landscape5.arcgis.com/arcgis/rest/services/Africa_Crop_Rice/ImageServer',
     },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/agriculture/',
+    dataProvider: ['Esri'],
+    sourceLink:
+      'https://amitbsen.maps.arcgis.com/home/item.html?id=a35b683f6ba045b2a4da4eacf58ea642',
     imgUrl: '',
     title: 'Rice Production',
   },
   {
     domain: 'agriculture',
     summary: [
-      'This data layer shows the total crop production (metric tonnes) as a measure of output from the cultivated area. The layer currently includes the crops maize.',
+      "Sorghum (Sorghum bicolor) is an important grass species used for human and animal food. It was first cultivated in Africa and currently 53% of the world's production is in sub-Saharan Africa. Millions of farmers in arid regions rely on this crop due to its drought tolerant qualities.",
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'sorghum',
+      type: 'image',
+      link: 'https://landscape5.arcgis.com/arcgis/rest/services/Africa_Crop_Sorghum/ImageServer',
     },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/agriculture/',
+    dataProvider: ['Esri'],
+    sourceLink:
+      'https://amitbsen.maps.arcgis.com/home/item.html?id=f64fbb5ac501469a8ae13543af55632b',
     imgUrl: '',
     title: 'Sorghum Production',
   },
@@ -157,9 +160,9 @@ const DATASETS = [
       'Logging in Cameroon’s forests is permitted within Forest Management Units (FMUs). This data set displays the FMUs within Cameroon’s permanent forest estate. Selective logging is permitted in Cameroon’s FMUs, which are further divided into logging concessions called annual allowable cuts (AACs). These logging permits require owners and operators to maintain permanent forest cover. This data set was produced in collaboration between the Cameroon Ministry of Forestry and Wildlife and WRI.',
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'forest-management-units',
+      type: 'feature',
+      link: 'https://gis-gfw.wri.org/arcgis/rest/services/country_data/africa/MapServer/3',
     },
     dataProvider: ['Global Forest Watch'],
     sourceLink:
@@ -700,29 +703,14 @@ const DATASETS = [
     title: 'Buildings',
   },
   {
-    domain: 'infrastructure',
-    summary: [
-      'Atlas AI’s Electrification Status layer estimates the availability of access to the electricity grid at a particular location, i.e. the presence or absence of electrification. At any snapshot in time, the Electrification Status is binary - either "yes" or "no".',
-    ],
-    service: {
-      id: '',
-      type: '',
-      link: '',
-    },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/infrastructure/electrification/',
-    imgUrl: '',
-    title: 'Electrification',
-  },
-  {
-    domain: 'infrastructure',
+    domain: 'zoning',
     summary: [
       'This feature layer provides access to OpenStreetMap (OSM) landuse areas data for Africa, which is updated every 15 minutes with the latest edits. This hosted feature layer view is referencing a hosted feature layer of OSM polygon (closed way) data in ArcGIS Online that is updated with minutely diffs from the OSM planet file.  This feature layer view includes landuse features defined as a query against the hosted feature layer (i.e. landuse is not blank).',
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'landuse',
+      type: 'feature',
+      link: 'https://services-eu1.arcgis.com/zci5bUiJ8olAal7N/ArcGIS/rest/services/OSM_AF_Landuse/FeatureServer/0',
     },
     dataProvider: ['Open Street Map', 'Esri'],
     sourceLink:
@@ -736,9 +724,9 @@ const DATASETS = [
       'This layer represents a network of classified roads, rural roads and forest tracks in Cameroon. The road layer is updated using recently acquired medium-resolution satellite images for the period 2005 to 2010. The new forest roads have been digitized and organized according to the data source (type of imagery), The date (acquisition date of the image), as well as the state of the road and its main use. The status of the old roads has been updated based on more recent observations using satellite imagery. The refining of data on existing public, departmental, regional and national roads was carried out on the basis of information provided by topographical maps and ground tracking for areas where cloud cover over the images made identification difficult. Given the different sources of this layer, the accuracy of the data is a function of the spatial resolution of the satellite images used.',
     ],
     service: {
-      id: '',
-      type: '',
-      link: '',
+      id: 'road-network',
+      type: 'feature',
+      link: 'https://gis.forest-atlas.org/server/rest/services/cmr/open_data_en/MapServer/115',
     },
     dataProvider: ['Global Forest Watch'],
     sourceLink:
@@ -752,7 +740,7 @@ const DATASETS = [
       'This feature layer provides access to OpenStreetMap (OSM) waterways data for Africa, which is updated every 15 minutes with the latest edits. This hosted feature layer view is referencing a hosted feature layer of OSM line (way) data in ArcGIS Online that is updated with minutely diffs from the OSM planet file.  This feature layer view includes waterway features defined as a query against the hosted feature layer (i.e. waterway is not blank).    ',
     ],
     service: {
-      id: '',
+      id: 'waterways',
       type: '',
       link: '',
     },
@@ -761,68 +749,6 @@ const DATASETS = [
       'https://amitbsen.maps.arcgis.com/home/item.html?id=82232d0415c04e7086414dff7eb1310f',
     imgUrl: '',
     title: 'Waterways',
-  },
-  {
-    domain: 'people',
-    summary: [
-      "Atlas AI's Population layer provides the count of people (number) and their density (people per square kilometer) for the African continent (52 countries) and India.",
-    ],
-    service: {
-      id: '',
-      type: '',
-      link: '',
-    },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/population/',
-    imgUrl: '',
-    title: 'Population',
-  },
-  {
-    domain: 'people',
-    summary: [
-      "Atlas AI's Population layer provides the count of people (number) and their density (people per square kilometer) for the African continent (52 countries) and India.",
-    ],
-    service: {
-      id: '',
-      type: '',
-      link: '',
-    },
-    dataProvider: ['Atlas AI'],
-    sourceLink: 'https://docs.atlasai.co/population/',
-    imgUrl: '',
-    title: 'Population Density',
-  },
-  {
-    domain: 'people',
-    summary: [
-      'Atlas AI’s Asset Wealth layer estimates household asset wealth based on asset ownership.',
-      'Accurate and comprehensive measurements of economic well-being are fundamental inputs into commerce, research, and policy but such measures are unavailable at a local level in many parts of the world. Our Asset Wealth layer is produced from a deep learning model that predicts survey-based estimates from satellite imagery. To facilitate comparison within and across countries, we transformed Asset Wealth into a normalized index. The index is then also divided into nine quantiles (i.e. bins) for easily comparing the Asset Wealth estimate at a particular location to estimates for other locations.',
-    ],
-    service: {
-      id: '',
-      type: '',
-      link: '',
-    },
-    dataProvider: ['Atlas AI'],
-    imgUrl: '',
-    title: 'Asset Wealth',
-    sourceLink: 'https://docs.atlasai.co/economic%20well-being/asset_wealth/',
-  },
-  {
-    domain: 'people',
-    summary: [
-      'Atlas AI’s Spending layer estimates Consumption Expenditure, a measure of how much households spend on the goods and services they consume. The term Consumption Expenditure is redundant because consumption indicates the volume of goods and services while expenditure attaches a monetary ($) value to that consumption. A simpler way to capture this idea is to say “spending”.',
-      'The Spending concept is one good way to measure economic well-being. It reflects what people need to spend money on for basic needs and services, as well as what they choose to spend money on for discretionary activities and goods. To make comparisons and calculations easier, we normalize this as household spending per person, per day.',
-    ],
-    service: {
-      id: '',
-      type: '',
-      link: '',
-    },
-    dataProvider: ['Atlas AI'],
-    imgUrl: '',
-    title: 'Economic Spending',
-    sourceLink: 'https://docs.atlasai.co/economic%20well-being/spending/',
   },
   {
     domain: 'infrastructure',
@@ -846,30 +772,34 @@ const DOMAINS = [
   {
     id: 'agriculture',
     title: 'Agriculture',
-    description: 'Discover the agriculture production',
+    description: 'Discover the agricultural yields',
     link: '',
+    bgImg: 'bg-agriculture',
     datasets: DATASETS.filter(({domain}) => domain === 'agriculture'),
   },
   {
     id: 'forestry',
     title: 'Forestry',
-    description: 'Explore forestry datasets',
+    description: 'Explore forest conditions',
     link: '',
+    bgImg: 'bg-forestry',
     datasets: DATASETS.filter(({domain}) => domain === 'forestry'),
   },
   {
     id: 'infrastructure',
     title: 'Infrastructure',
-    description: 'See the existing infrastructure',
+    description: 'Understand existing infrastructure',
     link: '',
+    bgImg: 'bg-infrastructure',
     datasets: DATASETS.filter(({domain}) => domain === 'infrastructure'),
   },
   {
-    id: 'people',
-    title: 'People',
-    description: 'Insights on population',
+    id: 'zoning',
+    title: 'Landuse',
+    description: 'Insights on landuse and zoning',
     link: '',
-    datasets: DATASETS.filter(({domain}) => domain === 'people'),
+    bgImg: 'bg-zoning',
+    datasets: DATASETS.filter(({domain}) => domain === 'zoning'),
   },
 ];
 

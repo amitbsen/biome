@@ -13,6 +13,8 @@ const candidateMapVar = makeVar<null | any>(null);
 const deliveryLocationsVar = makeVar<null | any>(null);
 const deliveryViewVar = makeVar<null | any>(null);
 const deliveryMapVar = makeVar<null | any>(null);
+const selectedBiomassVar = makeVar<string>('maize');
+const nearestFacilities = makeVar<null | any>(null);
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -21,6 +23,11 @@ const cache = new InMemoryCache({
         useGeoenrichment: {
           read() {
             return useGeoenrichmentVar();
+          },
+        },
+        selectedBiomass: {
+          read() {
+            return selectedBiomassVar();
           },
         },
         selectedCommunity: {
@@ -97,4 +104,5 @@ export {
   deliveryMapVar,
   deliveryLocationsVar,
   deliveryViewVar,
+  selectedBiomassVar,
 };

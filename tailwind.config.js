@@ -13,6 +13,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'cameroon-banner': "url('/images/cameroon-banner.jpeg')",
+        agriculture: "url('/images/agriculture.jpg')",
+        infrastructure: "url('/images/infrastructure.jpg')",
+        forestry: "url('/images/forestry.jpg')",
+        zoning: "url('/images/zoning.jpg')",
       },
     },
   },
