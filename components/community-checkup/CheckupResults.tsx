@@ -3,9 +3,7 @@ import {Divider} from 'antd';
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {selectedCommunityVar, useGeoenrichmentVar} from '../../data/cache';
-import esriConfig from '@arcgis/core/config';
 import {API_KEY} from '../../constants/esriConfig';
-import {ApiKey} from '@esri/arcgis-rest-auth';
 
 const CheckupResults = () => {
   const selectedCommunity = useReactiveVar(selectedCommunityVar);

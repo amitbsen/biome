@@ -1,5 +1,7 @@
-import {Steps} from 'antd';
+import {Button, Steps} from 'antd';
 import React, {useState} from 'react';
+import BiomassSelector from './BiomassSelector';
+import CandidateSelection from './CandidateSelection';
 
 const {Step} = Steps;
 const steps = [
@@ -30,6 +32,22 @@ const StepsContainer = () => {
           <Step key={idx} title={title} description={description} />
         ))}
       </Steps>
+      {currStep === 0 ? <BiomassSelector /> : null}
+      {currStep === 1 ? <CandidateSelection /> : null}
+      <div className="flex justify-between mt-8">
+        <div>
+          {currStep !== 0 ? (
+            <Button onClick={prev}>Previous Step</Button>
+          ) : null}
+        </div>
+        <div>
+          {currStep !== 3 ? (
+            <Button type="primary" className="text-white" onClick={next}>
+              <span className="text-white">Next Step</span>
+            </Button>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 };

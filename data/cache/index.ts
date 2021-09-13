@@ -3,6 +3,7 @@ import {Service} from '../../types';
 
 const addedLayerVar = makeVar<null | Service>(null);
 const exploreMapVar = makeVar<null | any>(null);
+const candidateMapVar = makeVar<null | any>(null);
 const communityCheckupMapVar = makeVar<null | any>(null);
 const removedLayerVar = makeVar<null | Service>(null);
 const selectedCommunityVar = makeVar<null | any>(null);
@@ -25,6 +26,11 @@ const cache = new InMemoryCache({
         exploreMap: {
           read() {
             return exploreMapVar();
+          },
+        },
+        candidateMap: {
+          read() {
+            return candidateMapVar();
           },
         },
         communityCheckupMap: {
@@ -55,4 +61,5 @@ export {
   communityCheckupMapVar,
   selectedCommunityVar,
   useGeoenrichmentVar,
+  candidateMapVar,
 };
