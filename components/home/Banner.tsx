@@ -13,7 +13,7 @@ const Banner = () => {
           </p>
         </div>
         <div className="pt-10">
-          <Link href="/explorer">
+          <Link href="/explore">
             <span className="hover:bg-white hover:text-blue-600 transition-all duration-200 text-white text-base border-2 border-white px-5 py-3 ">
               Dive Deeper <ArrowRightOutlined />
             </span>
