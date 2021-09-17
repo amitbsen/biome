@@ -180,12 +180,15 @@ const ResultsContainer = () => {
       <div className="col-span-2">
         {nearestFacilities && yields ? <FinalMap /> : null}
       </div>
-      <div className="col-span-3">
-        <h1>Routes</h1>
+      <div className="col-span-3 mt-16">
+        <h1 className="text-3xl">Optimal Routes</h1>
         {nearestFacilities
           ? nearestFacilities.features.map(({attributes}, idx) => {
               return (
-                <div className="rounded border" key={idx}>
+                <div
+                  className="mb-4 rounded border p-8 hover:bg-gray-100 cursor-pointer"
+                  key={idx}
+                >
                   <Descriptions title={`Route: ${attributes.Name}`}>
                     <Descriptions.Item label="Total Mileage">
                       {attributes.Total_Miles.toFixed(2)}
